@@ -13,7 +13,7 @@ import { Link } from "lucide-react";
 //   )
 // }
 
-export default function Home()  {
+export default function Home() {
   return (
     <div className="flex flex-col max-h-screen justify-center items-center">
       <main className="flex flex-col items-center justify-center w-full flex-1 p-2 pt-10 text-center">
@@ -74,7 +74,9 @@ export default function Home()  {
                       NeoSapien
                     </a>
                   </h2>
-                  <h4 className="text-md font-thin">September 2024 - Present</h4>
+                  <h4 className="text-md font-thin">
+                    September 2024 - Present
+                  </h4>
                 </div>
                 <div className="flex flex-row items-center justify-between">
                   <h3 className="text-sm font-thin">AI Developer Intern</h3>
@@ -100,18 +102,17 @@ export default function Home()  {
                   <h4 className="text-md font-thin">May 2024 - July 2024</h4>
                 </div>
                 <div className="flex flex-row items-center justify-between">
-                  <h3 className="text-sm font-thin">Software Developer Intern</h3>
+                  <h3 className="text-sm font-thin">
+                    Software Developer Intern
+                  </h3>
                   <h3 className="text-sm font-thin">Chennai, India</h3>
                 </div>
                 <p>
-                  As part of the Process Transformation and Automation team, I developed full stack applications to streamline the business functions and the manual processes.
+                  As part of the Process Transformation and Automation team, I
+                  developed full stack applications to streamline the business
+                  functions and the manual processes.
                 </p>
               </div>
-
-              
-
-
-
             </div>
           </section>
         </div>
@@ -119,7 +120,7 @@ export default function Home()  {
         <div className="flex flex-row lg:flex-row items-center justify-center lg:w-1/2 mt-4">
           <AnimatedBentoGrid />
         </div>
-{/* 
+        {/* 
 
         <div className="flex flex-row lg:flex-row items-center justify-center lg:w-1/2">
           <section className="flex flex-col items-start justify-center mx-auto p-2tems-center  w-full">
@@ -140,6 +141,4 @@ export default function Home()  {
       </main>
     </div>
   );
-};
-
-
+}

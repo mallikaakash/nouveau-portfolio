@@ -22,13 +22,13 @@ const blockVariants = {
 //     </motion.div>
 //   </motion.div>
 // )
-
-export const IdeasBlock = () => (
+export const PapersBlock = () => (
   <motion.div
     className="p-4 rounded-lg shadow-lg bg-[#DBA979]/50 flex flex-col items-center justify-center text-center "
     variants={blockVariants}
     whileHover="hover"
     whileTap="tap"
+    onClick={() => window.location.href = '/papers'}
   >
     <Lightbulb className="w-6 h-6 mb-4" />
     <h2 className="text-xl font-semibold">Research Papers</h2>
@@ -43,12 +43,13 @@ export const IdeasBlock = () => (
   </motion.div>
 )
 
-export const LaunchBlock = () => (
+export const ProjectBlock = () => (
   <motion.div
     className="p-4 rounded-lg shadow-lg bg-[#FFE6A9] flex flex-col items-center justify-center text-center"
     variants={blockVariants}
     whileHover="hover"
     whileTap="tap"
+    onClick={() => window.location.href = '/projects'}
   >
     <Rocket className="w-6 h-6 mb-4" />
     <h2 className="text-xl font-semibold">Projects</h2>
@@ -63,12 +64,14 @@ export const LaunchBlock = () => (
   </motion.div>
 )
 
-export const EnergyBlock = () => (
+export const StashBlock = () => (
   <motion.div
     className="p-4 rounded-lg shadow-lg bg-[#F0EBE3] flex flex-col items-center justify-center text-center"
     variants={blockVariants}
     whileHover="hover"
     whileTap="tap"
+    onClick={() => window.location.href = '/knowledge_stash'}
+
   >
     <Zap className="w-6 h-6 mb-4" />
     <h2 className="text-xl font-semibold">Knowledge Stash</h2>
@@ -83,12 +86,13 @@ export const EnergyBlock = () => (
   </motion.div>
 )
 
-export const DesignBlock = () => (
+export const WritingBlock = () => (
   <motion.div
     className="p-4 rounded-lg shadow-lg bg-[#A59D84]/50 flex flex-col items-center justify-center text-center"
     variants={blockVariants}
     whileHover="hover"
     whileTap="tap"
+    onClick={() => window.location.href = '/writing'}
   >
     <Palette className="w-6 h-6 mb-4" />
     <h2 className="text-xl font-semibold">Writing</h2>

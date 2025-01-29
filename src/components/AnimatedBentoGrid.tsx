@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion"
 import {
-  IdeasBlock,
-  LaunchBlock,
-  EnergyBlock,
-  DesignBlock,
+  PapersBlock,
+  ProjectBlock,
+  StashBlock,
+  WritingBlock,
   // MusicBlock,
   // PhotosBlock,
   // CoffeeBlock,
@@ -55,16 +55,16 @@ export default function AnimatedBentoGrid() {
         <CodingBlock />
       </motion.div> */}
       <motion.div variants={getDirectionVariants(1)}>
-        <IdeasBlock />
+        <PapersBlock />
       </motion.div>
       <motion.div variants={getDirectionVariants(2)}>
-        <LaunchBlock />
+        <ProjectBlock />
       </motion.div>
       <motion.div variants={getDirectionVariants(3)}>
-        <EnergyBlock />
+        <StashBlock />
       </motion.div>
       <motion.div variants={getDirectionVariants(4)}>
-        <DesignBlock />
+        <WritingBlock />
       </motion.div>
       {/* <motion.div variants={getDirectionVariants(5)}>
         <MusicBlock />
