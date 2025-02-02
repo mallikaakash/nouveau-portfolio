@@ -64,28 +64,6 @@ export const ProjectBlock = () => (
   </motion.div>
 )
 
-export const StashBlock = () => (
-  <motion.div
-    className="p-4 rounded-lg shadow-lg bg-[#F0EBE3] flex flex-col items-center justify-center text-center"
-    variants={blockVariants}
-    whileHover="hover"
-    whileTap="tap"
-    onClick={() => window.location.href = '/knowledge_stash'}
-
-  >
-    <Zap className="w-6 h-6 mb-4" />
-    <h2 className="text-xl font-semibold">Knowledge Stash</h2>
-    {/* <motion.div
-      className="mt-2"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: [0, 1, 0] }}
-      transition={{ duration: 0.5, repeat: Number.POSITIVE_INFINITY }}
-    >
-      ⚡
-    </motion.div> */}
-  </motion.div>
-)
-
 export const WritingBlock = () => (
   <motion.div
     className="p-4 rounded-lg shadow-lg bg-[#A59D84]/50 flex flex-col items-center justify-center text-center"
@@ -108,6 +86,30 @@ export const WritingBlock = () => (
     </motion.div> */}
   </motion.div>
 )
+
+export const StashBlock = () => (
+  <motion.div
+    className="p-4 rounded-lg shadow-lg bg-[#F0EBE3] flex flex-col items-center justify-center text-center"
+    variants={blockVariants}
+    whileHover="hover"
+    whileTap="tap"
+    onClick={() => window.location.href = '/knowledge_stash'}
+
+  >
+    <Zap className="w-6 h-6 mb-4" />
+    <h2 className="text-xl font-semibold">Knowledge Stash</h2>
+    {/* <motion.div
+      className="mt-2"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: [0, 1, 0] }}
+      transition={{ duration: 0.5, repeat: Number.POSITIVE_INFINITY }}
+    >
+      ⚡
+    </motion.div> */}
+  </motion.div>
+)
+
+
 
 // export const MusicBlock = () => (
 //   <motion.div

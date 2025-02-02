@@ -46,7 +46,7 @@ const getDirectionVariants = (index: number) => {
 export default function AnimatedBentoGrid() {
   return (
     <motion.div
-      className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl w-full"
+      className="grid grid-cols-2 grid-rows-2 md:grid-cols-2 gap-4 max-w-4xl md:w-2/3 md:mx-auto"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
