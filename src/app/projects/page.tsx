@@ -6,9 +6,19 @@ import { useState } from "react";
 const projects = {
   ML: [
     {
-      title: "SimPSOEnsemble",
-      description: "",
-      link: "#",
+      title: "Text To Speech Models",
+      description: "Ongoing project on creating a Text To Speech model which can effectively capture the emotional spectrum that is characteristic of the Human speech. Part of Btech Final Year Major Project.",
+      link: "https://github.com/mallikaakash",
+    },
+    {
+      title: "SimPSOEnsemble Model",
+      description: "A novel pipeline for ensemble learning using Particle Swarm Optimization (PSO) and Simulated Annealing (SA) for hyperparameter optimization in an optimized exploration-exploitation trade-off, for stock prediction on the NIFTY50 dataset.",
+      link: "https://github.com/mallikaakash",
+    },
+    {
+      title: "PaliGemma Model Implementation",
+      description: "Implemented Paligemma- a Multimodal Vision Language model and the Sigmoid Loss for Language Image Pre-Training (SIGLip) from scratch using Python and PyTorch.",
+      link: "https://github.com/mallikaakash",
     },
     
   ],
@@ -57,12 +67,12 @@ export default function ProjectsPage() {
               key={tab}
               onClick={() => setActiveTab(tab as "ML" | "Dev" | "Others")}
               className={`px-4 py-2 rounded-full transition-all duration-300 text-sm font-semibold
-                ${
-                  tab === activeTab
-                    ? "bg-yellow-800 text-white shadow-xl scale-105"
-                    : "hover:bg-yellow-700/10 hover:shadow-xl hover:scale-105"
-                } 
-                border border-transparent hover:border-yellow-800/40`}
+              ${
+                tab === activeTab
+                ? "bg-gradient-to-r from-yellow-800/60 to-yellow-700/60 text-white shadow-xl scale-105 backdrop-blur-sm"
+                : "hover:bg-gradient-to-r hover:from-yellow-800/10 hover:to-yellow-600/10 hover:shadow-xl hover:scale-105"
+              } 
+              border border-transparent hover:border-yellow-800/40`}
             >
               {tab}
             </button>

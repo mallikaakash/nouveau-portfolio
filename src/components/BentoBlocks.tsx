@@ -60,7 +60,7 @@ export const StashBlock = () => (
 
   >
     <Zap className="w-6 h-6 mb-4" />
-    <h2 className="text-lg font-semibold">Knowledge Stash</h2>
+    <h2 className="text-lg font-semibold">Ad-hoc Info Dump</h2>
    
   </motion.div>
 )
