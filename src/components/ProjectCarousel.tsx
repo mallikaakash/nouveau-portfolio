@@ -27,7 +27,7 @@ const projects: Project[] = [
   },
   {
     title: "DPViz",
-    description: "A web based visualizer in order to learn andunderstand various dynamic programming algorithms by means of a visual aid.",
+    description: "A web based visualizer in order to learn andunderstand various dynamic programming algorithms by means of a visual aid. Built it one afternoon when I was learning DP, as I found it tedious to visualize with pen and paper.",
     link: "https://dpviz.vercel.app/",
     type: "Web Dev"
   },
@@ -63,11 +63,11 @@ const ProjectCarousel: React.FC = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center h-[250px]">
-      <div className="w-full  mx-auto relative h-full px-0 sm:px-12"> {/* Added horizontal padding */}
-        <div className=" bg-yellow-900/20 bg-opacity-30 rounded-3xl h-full overflow-hidden backdrop-blur-lg transition-all duration-300 p-4 pl-12 sm:p-6 ">
-          <div className="flex flex-row items-center justify-between space-x-4"> {/* Added space between items */}
-            <h3 className="text-sm md:text-xl font-semibold text-yellow-700 truncate flex-1">{project.title}</h3> {/* Added truncate and flex-1 */}
+    <div className="w-full flex items-center justify-center h-[260px]">
+      <div className="w-full  mx-auto relative h-full px-0 sm:px-12"> 
+        <div className=" bg-yellow-900/20 bg-opacity-30 rounded-3xl h-full overflow-hidden backdrop-blur-lg transition-all duration-300 p-4 pl-12 sm:p-6">
+          <div className="flex flex-row items-center justify-between space-x-4">
+            <h3 className="text-sm md:text-xl font-semibold text-yellow-700 truncate flex-1">{project.title}</h3> 
             <Link
               href={project.link} 
               target="_blank" 
@@ -111,5 +111,7 @@ const ProjectCarousel: React.FC = () => {
     </div>
   );
 };
+
+
 
 export default ProjectCarousel;

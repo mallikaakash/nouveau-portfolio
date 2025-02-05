@@ -4,24 +4,24 @@ import Link from "next/link"; // Add this import
 
 let papersList = [
     {
-        title: "Quantum Computing in Neural Networks",
-        conference: "IEEE Quantum Computing Conference 2023",
-        abstract: "This paper explores the integration of quantum computing principles in neural network architectures...",
-        year: "2023",
-        paperLink: "https://example.com/quantum-paper"
+        title: "QGAPHnet : Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation",
+        conference: "IEEE IGARSS 2024, Athen, Greece",
+        abstract: "This paper introduces a comprehensive investigation into soil moisture and temperature dynamics, employing a dynamic soil moisture dataset. Utilising Quantum Long Short Term Memory (QLSTM), we apply Quantum Genetic Algorithm (QGA) and Particle Swarm Optimisation (PSO) to study and predict patterns within the dataset.",
+        status: "published",
+        paperLink: "https://ieeexplore.ieee.org/document/10641651"
     },
     {
         title: "Efficient Deep Learning for Edge Devices",
         conference: "ACM Mobile Computing Symposium 2023",
         abstract: "A novel approach to optimize deep learning models for resource-constrained edge devices...",
-        year: "2023",
+        status: "2023",
         paperLink: "https://example.com/edge-computing-paper"
     },
     {
         title: "Blockchain-based Secure Data Transfer",
         conference: "International Conference on Cybersecurity 2022",
         abstract: "Implementing secure data transfer protocols using blockchain technology...",
-        year: "2022",
+        status: "2022",
         paperLink: "https://example.com/blockchain-paper"
     }
 ]
@@ -59,7 +59,7 @@ const page = () => {
                 title={paper.title}
                 conference={paper.conference}
                 abstract={paper.abstract}
-                year={paper.year}
+                status={paper.status}
                 paperLink={paper.paperLink}
             />
         ))}

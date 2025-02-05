@@ -4,19 +4,19 @@ interface PaperCardProps {
     title: string;
     abstract: string;
     conference: string;
-    year: string;
+    status: string;
     paperLink: string;
 }
-const PaperCard: React.FC<PaperCardProps> = ({ title, abstract, conference, year, paperLink }) => {
+const PaperCard: React.FC<PaperCardProps> = ({ title, abstract, conference, status, paperLink }) => {
     return (
         <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
             <div className="flex justify-between items-center mb-2">
                 <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
                     {title}
                 </h2>
-                <a
+                <a 
                     href={paperLink}
-                    className="inline-flex items-center text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
+                    className="inline-flex items-center text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors pl-10"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -30,7 +30,7 @@ const PaperCard: React.FC<PaperCardProps> = ({ title, abstract, conference, year
                 {abstract}
             </p>
             <div className="text-xs text-neutral-500 dark:text-neutral-500">
-                {conference}, {year}
+                {conference} [{' '}<span className="font-bold">{status}</span>{' '}]
             </div>
         </div>
     )
