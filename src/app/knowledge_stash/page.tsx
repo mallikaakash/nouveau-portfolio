@@ -18,7 +18,7 @@ const Page = () => {
       <br />
       <Link href="https://eugeneyan.com/writing" className="text-blue-500">Eugene Yan&apos;s Blogs</Link>
       <br />
-      <Link href="https://karpathy.github.io" className="text-blue-500">Andrew "The Goat" Karpathy&apos;s Blogs</Link>
+      <Link href="https://karpathy.github.io" className="text-blue-500">Andrew &quot;The Goat&quot; Karpathy&apos;s Blogs</Link>
       <br />
       <Link href="https://lilianweng.github.io/" className="text-blue-500">Lilian Weng&apos;s Blogs</Link>
       <br/>
