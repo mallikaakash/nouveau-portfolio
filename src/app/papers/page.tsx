@@ -2,7 +2,7 @@ import PaperCard from "@/components/PaperCard";
 import React from "react";
 import Link from "next/link"; // Add this import
 
-let papersList = [
+const papersList = [
     {
         title: "QGAPHnet : Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation",
         conference: "IEEE IGARSS 2024, Athen, Greece",

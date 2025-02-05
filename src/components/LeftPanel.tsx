@@ -1,6 +1,4 @@
 import React from "react";
-import NeedleUnderline from "../../public/needle-underline (1).svg";
-
 const LeftPanel = () => {
   return (
     <div className="w-full lg:w-4/6 order-1 flex flex-col items-center justify-center p-4">

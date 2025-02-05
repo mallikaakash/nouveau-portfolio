@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import { BsTwitterX } from "react-icons/bs"
 import { SiLeetcode } from "react-icons/si"
-import Link from "next/link"
 
 export default function AnimatedNavbar() {
   const [isExpanded, setIsExpanded] = React.useState(false)

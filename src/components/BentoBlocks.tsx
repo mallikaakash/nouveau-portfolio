@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code, Lightbulb, Rocket, Zap, Palette, Music, Camera, Coffee } from "lucide-react"
+import {Lightbulb, Rocket, Zap, Palette } from "lucide-react"
 
 const blockVariants = {
   hover: { scale: 1.05 },

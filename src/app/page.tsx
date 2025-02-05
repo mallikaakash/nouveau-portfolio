@@ -1,10 +1,6 @@
 import ProjectCarousel from "@/components/ProjectCarousel";
 import AnimatedBentoGrid from "../components/AnimatedBentoGrid";
 import AnimatedNavbar from "../components/AnimatedNavbar";
-import Link from "next/link";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa6";
-import { BsTwitterX } from "react-icons/bs";
-import { SiLeetcode } from "react-icons/si";
 import LeftPanel from "@/components/LeftPanel";
 import { FaArrowRight } from "react-icons/fa";
 

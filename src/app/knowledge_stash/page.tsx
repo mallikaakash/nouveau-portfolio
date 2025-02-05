@@ -8,47 +8,45 @@ const Page = () => {
   const accordionItems = [
     {
       title: "Blogs (ML, Maths, Astrophysics, Misc...) that I refer to -",
-      content: <div><Link href="https://colah.github.io" className="text-blue-500">Colah's Blog</Link>
+      content: <div><Link href="https://colah.github.io" className="text-blue-500">Colah&apos;s Blog</Link>
       <br />
       <Link href="https://lmsys.org/blog/" className="text-blue-500">LLM Sys blog</Link>
       <br />
-      <Link href="https://huyenchip.com" className="text-blue-500">Chip Huyen's Blogs</Link>
+      <Link href="https://huyenchip.com" className="text-blue-500">Chip Huyen&apos;s Blogs</Link>
       <br />
-      <Link href="https://jalammar.github.io" className="text-blue-500">Jay Alammar's Blogs</Link>
+      <Link href="https://jalammar.github.io" className="text-blue-500">Jay Alammar&apos;s Blogs</Link>
       <br />
-      <Link href="https://eugeneyan.com/writing" className="text-blue-500">Eugene Yan's Blogs</Link>
+      <Link href="https://eugeneyan.com/writing" className="text-blue-500">Eugene Yan&apos;s Blogs</Link>
       <br />
-      <Link href="https://karpathy.github.io" className="text-blue-500">Andrew "The Goat" Karpathy's Blogs</Link>
+      <Link href="https://karpathy.github.io" className="text-blue-500">Andrew "The Goat" Karpathy&apos;s Blogs</Link>
       <br />
-      <Link href="https://lilianweng.github.io/" className="text-blue-500">Lilian Weng's Blogs</Link>
+      <Link href="https://lilianweng.github.io/" className="text-blue-500">Lilian Weng&apos;s Blogs</Link>
       <br/>
-      <Link href="https://gregmankiw.blogspot.com/" className="text-blue-500">Greg Mankiw's Blog -
+      <Link href="https://gregmankiw.blogspot.com/" className="text-blue-500">Greg Mankiw&apos;s Blog -
       Random Observations for Students of Economics</Link>
       <br/>
-      <Link href="https://gregorygundersen.com/blog/" className="text-blue-500">Gregory Gunderson's Blogs</Link>
+      <Link href="https://gregorygundersen.com/blog/" className="text-blue-500">Gregory Gunderson&apos;s Blogs</Link>
       <br/>
-      <Link href="https://www.paulgraham.com/articles.html" className="text-blue-500">Paul Graham's Essays</Link>
+      <Link href="https://www.paulgraham.com/articles.html" className="text-blue-500">Paul Graham&apos;s Essays</Link>
       <br/>
-      <Link href="https://www.neelnanda.io/mechanistic-interpretability" className="text-blue-500">Neel Nanda's Blogs on Mech Interp</Link>
+      <Link href="https://www.neelnanda.io/mechanistic-interpretability" className="text-blue-500">Neel Nanda&apos;s Blogs on Mech Interp</Link>
       <br/>
       <Link href="https://distill.pub/" className="text-blue-500">Distill.pub</Link>
       <br/>
       <Link href="https://thegradient.pub/" className="text-blue-500">The Gradient</Link>
       <br/>
-      {/* <Link href="https://gregmankiw.blogspot.com/" className="text-blue-500">Greg Mankiw's Blog -
-      Random Observations for Students of Economics</Link> */}
       </div>     
     },
     {
       title: "Books, Series and Movies that I have love",
       content: <div> 
-        Isaac Asimov's Books top here. Both his Short story collection volumes as well as series. 
+        Isaac Asimov&apos;s Books top here. Both his Short story collection volumes as well as series. 
         <br/> 
         Closely followed by HG Wells and George Orwell. I enjoy a healthy dose of fantasy novels with the Harry Potter and Percy Jackson series (all of them) being my top ones along with the Six of Crows Duology. 
         <br/>
         I love the Black Mirror, the Dark, Stranger things, The Fall of the House of Usher series.
         <br/>
-        I am an avid anime watcher and manwha/webtoon reader. Top ones are Horimiya, Attack on Titan, Bleach, Black Clover, Solo Levelling, Monster,Dr. Stone, Omniscient Reader's Viewpoint, Unordinary....anddd the list is pretty long to be honest.
+        I am an avid anime watcher and manwha/webtoon reader. Top ones are Horimiya, Attack on Titan, Bleach, Black Clover, Solo Levelling, Monster,Dr. Stone, Omniscient Reader&apos;s Viewpoint, Unordinary....anddd the list is pretty long to be honest.
         
         </div>
     },
