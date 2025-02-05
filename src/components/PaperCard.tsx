@@ -16,7 +16,7 @@ const PaperCard: React.FC<PaperCardProps> = ({ title, abstract, conference, stat
                 </h2>
                 <a 
                     href={paperLink}
-                    className="inline-flex items-center text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors pl-10"
+                    className={`inline-flex items-center text-sm text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors pl-10 ${paperLink === '' ? 'hidden' : ''}`}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
