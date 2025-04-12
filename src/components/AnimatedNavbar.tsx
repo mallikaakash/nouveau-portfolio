@@ -10,55 +10,45 @@ export default function AnimatedNavbar() {
   const [isExpanded, setIsExpanded] = React.useState(false)
 
   return (
-    <div className="flex items-center justify-center mx-auto">
+    <div className="flex items-center justify-center mx-auto z-50">
       <motion.nav
         onMouseEnter={() => setIsExpanded(true)}
         onMouseLeave={() => setIsExpanded(false)}
-        className="relative overflow-hidden rounded-full bg-white/10 border-2 border-gray-200/20 backdrop-blur-sm"
+        className="relative overflow-hidden rounded-full bg-white/10 border-2 border-gray-200/20 backdrop-blur-sm z-50"
         animate={{
-          width: isExpanded ? 240 : 100, // Adjusted widths
+          width: isExpanded ? 260 : 100,
         }}
         transition={{
           duration: 0.3,
           ease: "easeInOut",
         }}
       >
-        <ul className="relative flex items-center justify-around p-2">
-          {!isExpanded ? (
-            <motion.span className="text-white text-sm">Contact</motion.span>
+        <ul className="flex items-center justify-center space-x-4 p-2  min-w-[100px]">
+          {isExpanded ? (
+            <>
+              {[
+              { href: "https://github.com/mallikaakash", Icon: FaGithub },
+              { href: "https://www.linkedin.com/in/aakash-mallik-82b99423b", Icon: FaLinkedin },
+              { href: "https://x.com/AakashMallik9", Icon: BsTwitterX },
+              { href: "mailto:aakashmallik7777@gmail.com", Icon: FaEnvelope },
+              { href: "https://leetcode.com/u/AakashMallik/", Icon: SiLeetcode }
+              ].map(({ href, Icon }) => (
+              <a
+                key={href}
+                href={href}
+                className="text-white hover:text-gray-300 transition-all duration-300 transform hover:scale-110 hover:rotate-3"
+              >
+                <Icon size={24} />
+              </a>
+              ))}
+            </>
           ) : (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className="flex space-x-3" // Increased space between icons
-            >
-              <a href="https://github.com/mallikaakash" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-all duration-300 
-                transform hover:scale-110 hover:rotate-3 p-0.5 rounded-full">
-                <FaGithub size={24} /> {/* Increased icon size */}
-              </a>
-              <a href="https://www.linkedin.com/in/aakash-mallik-82b99423b" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-all duration-300 
-                transform hover:scale-110 hover:rotate-3 p-0.5 rounded-full">
-                <FaLinkedin size={24} />
-              </a>
-              <a href="https://x.com/AakashMallik9" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-all duration-300 
-                transform hover:scale-110 hover:rotate-3 p-0.5 rounded-full">
-                <BsTwitterX size={24} />
-              </a>
-              <a href="mailto:aakashmallik7777@gmail.com" className="text-white hover:text-gray-300 transition-all duration-300 
-                transform hover:scale-110 hover:rotate-3 p-0.5 rounded-full">
-                <FaEnvelope size={24} />
-              </a>
-              <a href="https://leetcode.com/u/AakashMallik/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-all duration-300 
-                transform hover:scale-110 hover:rotate-3 p-0.5 rounded-full">
-                <SiLeetcode size={24} />
-              </a>
-            </motion.div>
+            <span className="text-white text-sm font-bold">Contact</span>
           )}
         </ul>
 
         <div
-          className="absolute inset-0 rounded-full"
+          className="absolute inset-0 rounded-full pointer-events-none"
           style={{
             border: "1px solid rgba(255, 255, 255, 0.1)",
             boxShadow: "inset 0 0 15px rgba(255, 255, 255, 0.05)",
