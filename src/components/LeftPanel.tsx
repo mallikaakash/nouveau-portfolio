@@ -5,7 +5,7 @@ const LeftPanel = () => {
       <section className="flex flex-col items-start justify-center mx-auto  w-full">
         <div className="text-3xl flex flex-row font-bold mb-2 text-center transform">
           <span className="relative">
-            About Me
+            Welcome
             <div className="absolute bottom-0 left-0 w-full -translate-y-0.5 h-1 rounded-full transform">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -22,21 +22,20 @@ const LeftPanel = () => {
          px-2
           text-start lg:text-md text-sm flex items-center justify-center w-full"
         >
-          I am a student, researcher, whimsical developer, and a moody writer.
+          I am Aakash Mallik and this is my attempt at carving a digital niche in my image. 
+          <br/>
+          I am an upcoming SDE at Wells Fargo, an independent researcher, whimsical developer, and a moody writer.
           Currently pursuing my B.Tech in Electronics and Electronics
           Engineering from National Institute of Technology Karnataka,
           Surathkal. <br />
+          My interests are varied and I am interested by a lot of things and thereby my twitter pseudonym &#x2192; JackOfAllTrades &#x028;Trying to get Jacked now &#x3b;P&#x029;. <br />  
           Over the years I have dabbled in a lot of stuff spanning multiple
           domains, and then decided for myself that research and technology is
           where my heart lies. Now I have completely pivoted to the field of AI
           research and software development. <br />
           My primary goal is to delve deep into the theoretical foundations of
           AI and power-efficient hardware architectures. <br />
-          My interests span across machine learning, mathematics, astrophysics,
-          literature - poetry and prose, anime/manga/manhwa. I thoroughly enjoy
-          an insightful conversation on any topic... be it on the narrative
-          depth of Attack on Titan or on the philosophical underpinnings of the
-          universe. <br />
+        
         </div>
       </section>
 
@@ -56,7 +55,28 @@ const LeftPanel = () => {
           </span>
         </div>
         <div className="experience px-2 text-start lg:text-md text-sm flex flex-col items-center justify-center w-full">
-          {/* NeoSapien */}
+          {/* Attenomics Labs */}
+          <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
+            <div className="flex justify-between items-center mb-2">
+              <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
+                <a
+                  href="https://www.linkedin.com/company/neosapien/posts/?feedView=all"
+                  className="hover:text-neutral-600"
+                >
+                  Attenomics Labs
+                </a>
+              </h2>
+              <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                April 2025 - Present
+              </span>
+            </div>
+            <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
+              AI Developer • Remote
+            </h3>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+              Freelance AI consultant and developer working at the intersection of AI and web3. Building custom models and applications to suit the needs of the startup.
+            </p>
+          </div>
           <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
             <div className="flex justify-between items-center mb-2">
               <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
@@ -68,7 +88,7 @@ const LeftPanel = () => {
                 </a>
               </h2>
               <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                September 2024 - Present
+                September 2024 - March 2025
               </span>
             </div>
             <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
