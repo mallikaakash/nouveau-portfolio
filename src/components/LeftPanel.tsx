@@ -1,4 +1,6 @@
 import React from "react";
+import ExperienceRoadmap from "./ExperienceRoadmap";
+
 const LeftPanel = () => {
   return (
     <div className="w-full lg:w-4/6 order-1 flex flex-col items-center justify-center p-4">
@@ -54,171 +56,15 @@ const LeftPanel = () => {
             </div>
           </span>
         </div>
-        <div className="experience px-2 text-start lg:text-md text-sm flex flex-col items-center justify-center w-full">
-          {/* Attenomics Labs */}
-          <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
-                <a
-                  href="https://www.linkedin.com/company/neosapien/posts/?feedView=all"
-                  className="hover:text-neutral-600"
-                >
-                  Attenomics Labs
-                </a>
-              </h2>
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                April 2025 - Present
-              </span>
-            </div>
-            <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
-              AI Developer • Remote
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Freelance AI consultant and developer working at the intersection of AI and web3. Building custom models and applications to suit the needs of the startup.
-            </p>
-          </div>
-          <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
-                <a
-                  href="https://www.linkedin.com/company/neosapien/posts/?feedView=all"
-                  className="hover:text-neutral-600"
-                >
-                  NeoSapien
-                </a>
-              </h2>
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                September 2024 - March 2025
-              </span>
-            </div>
-            <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
-              AI Developer Intern • Bengaluru, India
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Working as an AI developer and researcher to implement the Second
-              Brain infrastruture. It aims to serve as an AI companion and a
-              knowledge repository for the user.
-            </p>
-          </div>
-
-          {/* Similar pattern for other experiences */}
-          <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
-                <a href="" className="hover:text-neutral-600">
-                  On The Record Technology, California
-                </a>
-              </h2>
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                October 2024 - December 2024
-              </span>
-            </div>
-            <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
-              Software Developer • Remote
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Developed a desktop application - BlueCat for legal proceedings
-              transcription in courts. As one of the early engineers (contract),
-              my work focused on the speech-to-text models transcription
-              infrastructure, along with coding frontend components.
-            </p>
-          </div>
-
-          <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
-                <a
-                  href="https://www.linkedin.com/company/wellsfargo/"
-                  className="hover:text-neutral-600"
-                >
-                  Wells Fargo
-                </a>
-              </h2>
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                May 2024 - July 2024
-              </span>
-            </div>
-            <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
-              Software Developer Intern • Chennai, India
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              As part of the Process Transformation and Automation team, I
-              developed full stack applications to streamline the business
-              functions and the manual processes.
-            </p>
-          </div>
-
-          <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
-                <a
-                  href="https://www.linkedin.com/company/caarya/posts/?feedView=all"
-                  className="hover:text-neutral-600"
-                >
-                  IIT Delhi
-                </a>
-              </h2>
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                November 2023 - January 2024
-              </span>
-            </div>
-            <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
-              Winter Research Intern • Remote
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Worked under the guidance of Dr. Tapan K Gandhi on classification of the stages and progress of Non-Alcoholic Fatty Liver Disease, based on clinical tabulated data.
-            </p>
-          </div>
-
-          <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
-                <a
-                  href="https://www.linkedin.com/company/caarya/posts/?feedView=all"
-                  className="hover:text-neutral-600"
-                >
-                  Caarya
-                </a>
-              </h2>
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                January 2023 - May 2023
-              </span>
-            </div>
-            <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
-              Business Strategy Intern • Remote
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Caarya is a student work-study initiative whose goal is to drive
-              the Indian startup ecosystem. I worked with a vibrant team of
-              fantastic individuals and was guided by my peers and seniors. This
-              is where I learnt the very fundamentals of the operational
-              strategy of a startup.
-            </p>
-          </div>
-
-          <div className="mt-4 pb-4 border-b-2 border-dotted border-neutral-300/70 dark:border-neutral-700/50">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
-                <a
-                  href="https://www.linkedin.com/company/opensecretsnacks/posts/?feedView=all"
-                  className="hover:text-neutral-600"
-                >
-                  Open Secret
-                </a>
-              </h2>
-              <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                October 2022 - November 2022
-              </span>
-            </div>
-            <h3 className="text-sm text-neutral-500 dark:text-neutral-500 mb-2">
-              Business Strategy & Marketing Intern • Remote
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              Dipping my toes into the startup culture. Worked as business
-              strategy intern and marketing intern. Built the presence of the
-              brand on college campus and generated sales of 40k INR in a month.
-            </p>
-          </div>
+        
+        {/* Hover instruction */}
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 italic mb-4 px-2">
+          hover to know more
+        </p>
+        
+        {/* Experience Roadmap */}
+        <div className="w-full ">
+          <ExperienceRoadmap />
         </div>
       </div>
     </div>
