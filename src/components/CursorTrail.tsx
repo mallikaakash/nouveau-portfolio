@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Footprint = {
@@ -15,9 +15,10 @@ type Footprint = {
 export default function CursorTrail() {
   const [footprints, setFootprints] = useState<Footprint[]>([]);
   const [lastUpdate, setLastUpdate] = useState(0);
-  const updateDelay = 600; // Delay between step pairs in milliseconds
+  const lastPositionRef = useRef({ x: 0, y: 0 });
+  const updateDelay = 300; // Faster response for quick movement
   const footprintLifetime = 3000; // 3 seconds lifetime
-  const stepDelay = 300; // Delay between left and right foot in a pair
+  const stepDelay = 150; // Faster delay between feet for quick movement
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -26,45 +27,67 @@ export default function CursorTrail() {
       
       setLastUpdate(now);
       
-      // Calculate rotation based on mouse movement
-      const lastFootprint = footprints[footprints.length - 1];
-      const rotation = Math.atan2(
-        e.clientY - (lastFootprint?.y || e.clientY),
-        e.clientX - (lastFootprint?.x || e.clientX)
-      );
+      // Calculate movement direction based on actual movement
+      const deltaX = e.clientX - lastPositionRef.current.x;
+      const deltaY = e.clientY - lastPositionRef.current.y;
+      const rotation = Math.atan2(deltaY, deltaX) + (Math.PI / 2);
+      
+      // Update last position
+      lastPositionRef.current = { x: e.clientX, y: e.clientY };
 
       const baseId = now;
       
-      // Create left foot immediately
-      const leftFootprint = {
+      // Calculate perpendicular offset for foot positioning
+      const perpX = Math.cos(rotation) * 8;
+      const perpY = Math.sin(rotation) * 8;
+      
+      // Calculate both foot positions
+      const leftFootPos = {
+        x: e.clientX - perpX,
+        y: e.clientY - perpY + 8, // Slightly ahead
+        isLeft: true
+      };
+      
+      const rightFootPos = {
+        x: e.clientX + perpX,
+        y: e.clientY + perpY,
+        isLeft: false
+      };
+      
+      // Determine which foot is lower (further ahead in movement direction)
+      const lowerFoot = leftFootPos.y > rightFootPos.y ? leftFootPos : rightFootPos;
+      const upperFoot = leftFootPos.y > rightFootPos.y ? rightFootPos : leftFootPos;
+      
+      // Create lower foot immediately (the one that's ahead)
+      const lowerFootprint = {
         id: baseId,
-        x: e.clientX - 8, // Slightly offset left foot
-        y: e.clientY,
-        rotation: rotation + (Math.PI / 2),
-        isLeft: true,
+        x: lowerFoot.x,
+        y: lowerFoot.y,
+        rotation: rotation,
+        isLeft: lowerFoot.isLeft,
         timestamp: now,
       };
 
-      setFootprints(prev => [...prev, leftFootprint]);
+      setFootprints(prev => [...prev, lowerFootprint]);
 
-      // Create right foot after delay
+      // Create upper foot after delay (the one that's behind)
       setTimeout(() => {
-        const rightFootprint = {
+        const upperFootprint = {
           id: baseId + 1,
-          x: e.clientX + 8, // Slightly offset right foot
-          y: e.clientY + 10, // Slightly ahead
-          rotation: rotation + (Math.PI / 2),
-          isLeft: false,
+          x: upperFoot.x,
+          y: upperFoot.y,
+          rotation: rotation,
+          isLeft: upperFoot.isLeft,
           timestamp: now + stepDelay,
         };
         
-        setFootprints(prev => [...prev, rightFootprint]);
+        setFootprints(prev => [...prev, upperFootprint]);
       }, stepDelay);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [lastUpdate, footprints, stepDelay]);
+  }, [lastUpdate, stepDelay]);
 
   // Remove old footprints based on timestamp
   useEffect(() => {
@@ -88,9 +111,9 @@ export default function CursorTrail() {
             animate={{ opacity: 0.8, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
             transition={{ 
-              duration: 1.2,
-              opacity: { duration: 0.8 },
-              scale: { duration: 0.4 }
+              duration: 0.8, // Faster animation for responsiveness
+              opacity: { duration: 0.6 },
+              scale: { duration: 0.3 }
             }}
             className="absolute w-4 h-8"
             style={{
