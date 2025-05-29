@@ -42,47 +42,67 @@ export default function CursorTrail() {
       const perpY = Math.sin(rotation) * 8;
       
       // Calculate both foot positions
-      const leftFootPos = {
-        x: e.clientX - perpX,
-        y: e.clientY - perpY + 8, // Slightly ahead
-        isLeft: true
-      };
+      const leftFootX = e.clientX - perpX;
+      const leftFootY = e.clientY - perpY + 8;
+      const rightFootX = e.clientX + perpX;
+      const rightFootY = e.clientY + perpY;
       
-      const rightFootPos = {
-        x: e.clientX + perpX,
-        y: e.clientY + perpY,
-        isLeft: false
-      };
+      // Determine which foot is lower (higher Y value = lower on screen)
+      const leftIsLower = leftFootY > rightFootY;
       
-      // Determine which foot is lower (further ahead in movement direction)
-      const lowerFoot = leftFootPos.y > rightFootPos.y ? leftFootPos : rightFootPos;
-      const upperFoot = leftFootPos.y > rightFootPos.y ? rightFootPos : leftFootPos;
-      
-      // Create lower foot immediately (the one that's ahead)
-      const lowerFootprint = {
-        id: baseId,
-        x: lowerFoot.x,
-        y: lowerFoot.y,
-        rotation: rotation,
-        isLeft: lowerFoot.isLeft,
-        timestamp: now,
-      };
-
-      setFootprints(prev => [...prev, lowerFootprint]);
-
-      // Create upper foot after delay (the one that's behind)
-      setTimeout(() => {
-        const upperFootprint = {
-          id: baseId + 1,
-          x: upperFoot.x,
-          y: upperFoot.y,
+      if (leftIsLower) {
+        // Left foot is lower, so it appears first
+        const leftFootprint = {
+          id: baseId,
+          x: leftFootX,
+          y: leftFootY,
           rotation: rotation,
-          isLeft: upperFoot.isLeft,
-          timestamp: now + stepDelay,
+          isLeft: true,
+          timestamp: now,
         };
-        
-        setFootprints(prev => [...prev, upperFootprint]);
-      }, stepDelay);
+
+        setFootprints(prev => [...prev, leftFootprint]);
+
+        // Right foot appears after delay (upper foot)
+        setTimeout(() => {
+          const rightFootprint = {
+            id: baseId + 1,
+            x: rightFootX,
+            y: rightFootY,
+            rotation: rotation,
+            isLeft: false,
+            timestamp: now + stepDelay,
+          };
+          
+          setFootprints(prev => [...prev, rightFootprint]);
+        }, stepDelay);
+      } else {
+        // Right foot is lower, so it appears first
+        const rightFootprint = {
+          id: baseId,
+          x: rightFootX,
+          y: rightFootY,
+          rotation: rotation,
+          isLeft: false,
+          timestamp: now,
+        };
+
+        setFootprints(prev => [...prev, rightFootprint]);
+
+        // Left foot appears after delay (upper foot)
+        setTimeout(() => {
+          const leftFootprint = {
+            id: baseId + 1,
+            x: leftFootX,
+            y: leftFootY,
+            rotation: rotation,
+            isLeft: true,
+            timestamp: now + stepDelay,
+          };
+          
+          setFootprints(prev => [...prev, leftFootprint]);
+        }, stepDelay);
+      }
     };
 
     window.addEventListener("mousemove", handleMouseMove);
