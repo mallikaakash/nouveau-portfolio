@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface Experience {
   id: number;
@@ -18,7 +18,7 @@ const experiences: Experience[] = [
     id: 1,
     company: "Attenomics Labs",
     position: "AI Developer",
-    duration: "Apr25 - Present",
+    duration: "Apr 25 - Present",
     location: "Remote",
     description: "Freelance AI consultant and developer working at the intersection of AI and web3. Building custom models and applications to suit the needs of the startup.",
     link: "https://www.linkedin.com/company/neosapien/posts/?feedView=all"
@@ -27,7 +27,7 @@ const experiences: Experience[] = [
     id: 2,
     company: "NeoSapien",
     position: "AI Developer Intern",
-    duration: "Sep24 - Mar25",
+    duration: "Sep 24 - Mar 25",
     location: "Bengaluru, India",
     description: "Working as an AI developer and researcher to implement the Second Brain infrastructure. It aims to serve as an AI companion and a knowledge repository for the user.",
     link: "https://www.linkedin.com/company/neosapien/posts/?feedView=all"
@@ -36,7 +36,7 @@ const experiences: Experience[] = [
     id: 3,
     company: "On The Record Technology",
     position: "Software Developer",
-    duration: "Oct24 - Dec24",
+    duration: "Oct 24 - Dec 24",
     location: "California, Remote",
     description: "Developed a desktop application - BlueCat for legal proceedings transcription in courts. As one of the early engineers (contract), my work focused on the speech-to-text models transcription infrastructure, along with coding frontend components."
   },
@@ -44,7 +44,7 @@ const experiences: Experience[] = [
     id: 4,
     company: "Wells Fargo",
     position: "Software Developer Intern",
-    duration: "May24 - July24",
+    duration: "May 24 - Jul 24",
     location: "Chennai, India",
     description: "As part of the Process Transformation and Automation team, I developed full stack applications to streamline the business functions and the manual processes.",
     link: "https://www.linkedin.com/company/wellsfargo/"
@@ -53,7 +53,7 @@ const experiences: Experience[] = [
     id: 5,
     company: "IIT Delhi",
     position: "Winter Research Intern",
-    duration: "Nov23 - Jan24",
+    duration: "Nov 23 - Jan 24",
     location: "Remote",
     description: "Worked under the guidance of Dr. Tapan K Gandhi on classification of the stages and progress of Non-Alcoholic Fatty Liver Disease, based on clinical tabulated data.",
     link: "https://www.linkedin.com/company/caarya/posts/?feedView=all"
@@ -62,7 +62,7 @@ const experiences: Experience[] = [
     id: 6,
     company: "Caarya",
     position: "Business Strategy Intern",
-    duration: "Jan23 - May23",
+    duration: "Jan 23 - May 23",
     location: "Remote",
     description: "Caarya is a student work-study initiative whose goal is to drive the Indian startup ecosystem. I worked with a vibrant team of fantastic individuals and was guided by my peers and seniors. This is where I learnt the very fundamentals of the operational strategy of a startup.",
     link: "https://www.linkedin.com/company/caarya/posts/?feedView=all"
@@ -71,7 +71,7 @@ const experiences: Experience[] = [
     id: 7,
     company: "Open Secret",
     position: "Business Strategy & Marketing Intern",
-    duration: "Oct22 - Nov22",
+    duration: "Oct 22 - Nov 22",
     location: "Remote",
     description: "Dipping my toes into the startup culture. Worked as business strategy intern and marketing intern. Built the presence of the brand on college campus and generated sales of 40k INR in a month.",
     link: "https://www.linkedin.com/company/opensecretsnacks/posts/?feedView=all"
